@@ -1,5 +1,4 @@
-sudo mkfs.xfs /dev/xvdb
-sudo mount /dev/xvdb /var/www/html
+#!/bin/bash
 
 sudo yum update -y
 
@@ -14,4 +13,5 @@ cd master
 sudo systemctl enable httpd.service
 sudo systemctl start httpd.service
 
-sudo cp -r /home/ec2-user/master /var/www/html
+sudo mkfs.xfs /dev/xvdb
+sudo mount /dev/xvdb /var/www/html
